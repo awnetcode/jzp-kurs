@@ -6,10 +6,9 @@ let stateArray = useState(false);
 let isExpanded = stateArray[0];
 let setIsExpanded = stateArray[1];
 
-const buttonEl = <button onClick = {() => {
-   setIsExpanded(!isExpanded);
-}}>
-   {isExpanded ? "Ukryj" : "Pokaż"}
+//w funkcji strzałkowej można pominąć nawiasy klamrowe jeśli funkcja ma tylko jedno wyrażenie
+const buttonEl = <button onClick = {() => setIsExpanded(!isExpanded)}>
+   {isExpanded ? "Schowaj" : "Pokaż"}
    </button>;
 
 return (
